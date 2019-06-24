@@ -1,0 +1,16 @@
+postgres-data:
+  image: busybox
+  volumes:
+      - /var/lib/postgresql/data
+  container_name: sql-study-datastore
+
+postgresql:
+  image: postgres
+  environment:
+    POSTGRES_USER: grooves
+    POSTGRES_PASSWORD: password
+  ports:
+    - "5532:5432"
+  container_name: sql-study-db
+  volumes_from:
+      - postgres-data
