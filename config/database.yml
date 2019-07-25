@@ -1,0 +1,14 @@
+development:
+  adapter: "postgres"
+  host: "localhost"
+  user: "grooves"
+  password: "password"
+  database: "grooves"
+  port: 5532
+
+production:
+  adapter: "mysql2"
+  host: "example.com"
+  user: "sequel_test"
+  password: "sequel_pass"
+  database: "sequel_production"
